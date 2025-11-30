@@ -1,3 +1,11 @@
+---
+import '../styles/global.css'
+
+//Components
+
+import AsideMenu from '../components/AsideMenu.astro'
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,14 +13,36 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Spotify Clone</title>
 	</head>
-	<body>
+	<body id="app" class="relative h-screen p-2 gap-2 bg-black">
+		<header class="[grid-area:header] bg-blue-400">
+			Header
+		</header>
+		<aside class="[grid-area:aside] flex-col flex overflow-y-auto bg-red-400">
+			<AsideMenu/>
+		</aside>
+		<main class="[grid-area:main] bg-green-400">
+			Main
+		</main>
+		<footer class="[grid-area:player] bg-pink-400">
+			Player
+		</footer>
 		<slot />
 	</body>
 </html>
 
 <style>
+	#app{
+		display: grid;
+		grid-template-areas: 
+		"header header header"
+		"aside main main"
+		"player player player";
+		grid-template-columns: 350px 1fr;
+		grid-template-rows:auto 1fr auto;
+	}
+
 	html,
 	body {
 		margin: 0;

@@ -1,8 +1,15 @@
+---
+export interface Props {
+    class?: string;
+}
+---
+
 <svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
-    fill="none"
+    role="img"
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    class={Astro.props.class}
+    fill={Astro.props.class}
     ><path
         fill-rule="evenodd"
         clip-rule="evenodd"

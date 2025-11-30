@@ -4,6 +4,7 @@ import '../styles/global.css'
 //Components
 
 import AsideMenu from '../components/AsideMenu.astro'
+import Header from '../components/Header.astro'
 ---
 
 <!doctype html>
@@ -17,7 +18,7 @@ import AsideMenu from '../components/AsideMenu.astro'
 	</head>
 	<body id="app" class="relative h-screen p-2 gap-2 bg-black">
 		<header class="[grid-area:header] bg-blue-400">
-			Header
+			<Header/>
 		</header>
 		<aside class="[grid-area:aside] flex-col flex overflow-y-auto bg-red-400">
 			<AsideMenu/>

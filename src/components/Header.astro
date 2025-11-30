@@ -10,19 +10,39 @@ import GroupIcon from "../icons/GroupIcon.astro";
 
 ---
 
-<div>
-    <div>
-        <SpotifyIcon class="size-5"/>
+<div class="flex items-center justify-between w-full px-4 pt-2 pb-2">
+    <div class="text-green-50 pl-4">
+        <SpotifyIcon class="size-10"/>
     </div>
 
-    <div>
-        <HomeIcon class="size-5"/>
-        <SearchIcon class="size-5"/>
-        <ExplorerIcon class="size-5"/>
+    <div class="flex items-center gap-3 text-gray-400">
+
+        <button class="bg-zinc-900 p-4 rounded-full flex items-center justify-center transition-transform duration-100 hover:scale-105 hover:text-zinc-50 hover:bg-zinc-800">
+        <HomeIcon class="size-7" />
+        </button>
+
+        <div class="flex items-center bg-zinc-900 px-4 py-3 rounded-full w-[500px] transition-all duration-400 hover:text-zinc-50 hover:bg-zinc-800">
+
+        <SearchIcon class="size-7 text-zinc-400"/>
+
+        <input
+            type="text"
+            placeholder="¿Qué quieres reproducir?"
+            class="bg-transparent text-xl text-white ml-2 w-full focus:outline-none placeholder:text-gray-300"
+        />
+
+        <button class="p-1 flex flex-row transition-all duration-200 hover:scale-102 hover:text-zinc-50">
+            <ExplorerIcon class="size-7 text-zinc-400" />
+        </button>
+        </div>
+
     </div>
 
-    <div>
-        <NotificationIcon class="size-5"/>
-        <GroupIcon class="size-5"/>
+    <div class="flex flex-row items-center gap-6 text-gray-400">
+        <NotificationIcon class="size-7 transition-all duration-200 hover:scale-102 hover:text-zinc-50" />
+        <GroupIcon class="size-7 transition-all duration-200 hover:scale-102 hover:text-zinc-50" />
+        <div class="bg-gray-600 text-white rounded-full px-4 py-4 text-sm transition-all duration-200 hover:scale-102">
+        KA
+        </div>
     </div>
 </div>

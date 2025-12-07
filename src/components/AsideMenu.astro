@@ -1,0 +1,17 @@
+---
+import LibraryIcon from "../icons/LibraryIcon.astro";
+import PlusIcon from "../icons/PlusIcon.astro";
+import CompactIcon from "../icons/ExpandIcon.astro";
+import SideMenuItem from "./SideMenuItem.astro";
+---
+
+<nav class="flex flex-col flex-1 gap-2">
+    <div class="bg-zinc-900 rounded-lg p-2">
+        <ul>
+            <SideMenuItem href="/#">
+                <LibraryIcon class="size-6"/>
+                Tu Biblioteca
+            </SideMenuItem>
+        </ul>
+    </div>
+</nav>

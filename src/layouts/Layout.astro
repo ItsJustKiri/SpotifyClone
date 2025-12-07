@@ -5,6 +5,7 @@ import '../styles/global.css'
 
 import AsideMenu from '../components/AsideMenu.astro'
 import Header from '../components/Header.astro'
+import { Player } from '@/components/Player'
 ---
 
 <!doctype html>
@@ -24,11 +25,11 @@ import Header from '../components/Header.astro'
 			<aside class="[grid-area:aside] flex">
 				<AsideMenu/>
 			</aside>
-			<main class="[grid-area:main]">
+			<main class="[grid-area:main] rounded-lg bg-zinc-900 overflow-y-auto w-full">
 				<slot />
 			</main>
-			<footer class="[grid-area:player]">
-				Player
+			<footer class="[grid-area:player] h-20">
+				<Player client:load transition:name="media-player" transition:persist/>
 			</footer>
 		</div>
 
